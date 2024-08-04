@@ -1,0 +1,12 @@
+<div class="flex flex-col lg:flex-row gap-6">
+  <div class="p-4 md:p-10 bg-[#FFFBF5] rounded-lg lg:w-full md:w-1/2">
+    <p class="text-xl font-bold mb-4">User Reviews</p>
+    <div *ngFor="let review of reviews" class="review mb-6 p-4 bg-white shadow-md rounded-lg">
+      <h3 class="text-lg font-semibold mb-2">{{ review.title }}</h3>
+      <p class="text-gray-700 mb-4">{{ review.content }}</p>
+      <span class="review-author text-sm text-gray-500">{{ review.author }}</span>
+    </div>
+  </div>
+  <app-review-form class="lg:w-full md:w-1/2"></app-review-form>
+</div>
+

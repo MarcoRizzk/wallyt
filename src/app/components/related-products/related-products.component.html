@@ -1,0 +1,13 @@
+<div class="related-products p-4 shadow-md rounded-lg w-full">
+    <p class="text-lg font-bold">Related Products</p>
+    <div class="flex overflow-x-auto space-x-4 w-full">
+      <div class="related-product flex-none w-60" *ngFor="let product of relatedProducts">
+        <img [src]="product.image" alt="{{ product.name }}" class="w-full h-40 object-cover rounded-lg">
+        <div class="product-info mt-2">
+          <h3 class="text-lg font-medium">{{ product.name }}</h3>
+          <p class="text-gray-600">{{ product.price | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
